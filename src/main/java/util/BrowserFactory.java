@@ -20,7 +20,6 @@ public class BrowserFactory {
 	  driver.manage().window().maximize();
 	  driver.manage().deleteAllCookies();
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//	  driver.get("http://www.techfios.com/billing/?ng=admin/");
 	  
 	  return driver;  
 	 } 

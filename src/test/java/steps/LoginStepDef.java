@@ -15,25 +15,24 @@ import util.BrowserFactory;
 public class LoginStepDef {
 	WebDriver driver;
 	LoginPage loginPage;
-	
+
 //	@Before
 //	public void beforeRun() {
 //		driver = BrowserFactory.startBrowser();
 //		loginPage=PageFactory.initElements(driver, LoginPage.class);
 //	}
 //	
-	@Given ("^A user is on the Techfios login page$")
-	public void a_user_is_on_the_techfios_login_page() {	
-		  driver.get("http://www.techfios.com/billing/?ng=admin/");
+	@Given("^A user is on the Techfios login page$")
+	public void a_user_is_on_the_techfios_login_page() {
+		driver.get("http://www.techfios.com/billing/?ng=admin/");
 	}
-	
-	@Given ("^A user is on the \"([^\"]*)\" login page$")
-	public void a_user_is_on_the_login_page(String page) {	
-		if(page.equalsIgnoreCase("techfios")) {
-			 driver.get("http://www.techfios.com/billing/?ng=admin/");
-		}
-		else if(page.equalsIgnoreCase("GoogleSearch")) {
-			 driver.get("https://www.google.com");
+
+	@Given("^A user is on the \"([^\"]*)\" login page$")
+	public void a_user_is_on_the_login_page(String page) {
+		if (page.equalsIgnoreCase("techfios")) {
+			driver.get("http://www.techfios.com/billing/?ng=admin/");
+		} else if (page.equalsIgnoreCase("GoogleSearch")) {
+			driver.get("https://www.google.com");
 		}
 	}
 
@@ -46,7 +45,7 @@ public class LoginStepDef {
 	public void a_user_clicks_on_sign_on_button() throws Throwable {
 		loginPage.clickSignInButton();
 	}
-	
+
 	@When("^A user lands on the Dashboard page$")
 	public void a_user_should_land_on_Dashboard_page() throws Throwable {
 		String expectedTitle = "Dashboard- iBilling";
@@ -55,8 +54,9 @@ public class LoginStepDef {
 		Thread.sleep(2000);
 	}
 
-	
-	/*
-	 * @After public void tearDown() { driver.close(); driver.quit(); }
-	 */
+//	@After
+//	public void tearDown() {
+//		driver.close();
+//		driver.quit();
+//	}
 }

@@ -7,10 +7,10 @@ package runner;
 
 	@RunWith(Cucumber.class)
 	@CucumberOptions(
-//			features=".\\src\\test\\java\\features\\TF_Login.feature",
-			features="classpath:feature", // for if you have more then one feature (will read all features)
+
+			features="classpath:feature", 
 			glue="steps",
-			tags="@others1", // to run more then one scenarios "@scenario1,@scenario2" // use "@loginFeature" to run the whole feature // will run all tags even in different features
+			tags="@others1",
 			monochrome=true,
 			dryRun=false,
 			plugin= {
